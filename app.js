@@ -3,19 +3,22 @@ $(document).ready(function (){
   //   window.location.href = "http://www.candyspace.com";
   // };
   $(data).each(function(index, element) {
-    $('#alldata').append('<tr><td> ' + element["Name"] + ' </td> <td>' + element["Text"] + ' </td><td>' + element["Date"] + '</td><td> ' + element["Email"] + '</td></tr>');
+    $('#alldata').append('<tr class="table_row"><td class="name"> ' + element["Name"] + ' </td> <td class="text">' + element["Text"] + ' </td><td class="date">' + element["Date"] + '</td><td class="email"> ' + element["Email"] + '</td></tr>');
   });
 
   $(function() {
-    $( "#alldata" ).sortable({
+    $( '#alldata' ).sortable({
       revert: true
     });
     $( "#draggable" ).draggable({
-      connectToSortable: "#alldata",
-      helper: "clone",
-      revert: "invalid"
+      connectToSortable: '#alldata',
+      helper: 'clone',
+      revert: 'invalid'
     });
-    $( "tr, td" ).disableSelection();
+    // $( 'tr, td' ).disableSelection();
+  });
+  $('.table_row').click(function() {
+    $(this).toggleClass('active');
   });
 });
 
