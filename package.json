@@ -1,0 +1,23 @@
+{
+  "name": "candyspace",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callumsong/candyspace.git"
+  },
+  "author": "Callum Song <ghksong@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callumsong/candyspace/issues"
+  },
+  "homepage": "https://github.com/callumsong/candyspace",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}
